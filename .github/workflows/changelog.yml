@@ -1,32 +1,38 @@
-            - name: Changelog from Conventional Commits
-  # You may pin to the exact commit or the version.
-  # uses: requarks/changelog-action@6d71e098526ee17bae963f058d34cd763378337f
-  uses: requarks/changelog-action@v1.10.2
-  with:
-    # GitHub Token
-    token: 
-    # The latest tag (which triggered this job) (only if using latest tag)
-    tag: # optional
-    # The tag from which the changelog is to be determined (only if using tag range)
-    fromTag: # optional
-    # The tag up to which the changelog is to be determined (only if using tag range)
-    toTag: # optional
-    # Types to exclude from the Changelog
-    excludeTypes: # optional, default is build,docs,other,style
-    # Scopes to exclude from the Changelog
-    excludeScopes: # optional, default is 
-    # Types to restrict to for the Changelog (overrides excludeTypes if defined)
-    restrictToTypes: # optional, default is 
-    # Should CHANGELOG.md be updated with latest changelog
-    writeToFile: # optional, default is true
-    # Path to the changelog file
-    changelogFilePath: # optional, default is CHANGELOG.md
-    # Should the changelog include the issues referenced for each PR.
-    includeRefIssues: # optional, default is true
-    # Prepend type headers with their corresponding gitmoji
-    useGitmojis: # optional, default is true
-    # Whether to include commits that don't respect the Conventional Commits format
-    includeInvalidCommits: # optional, default is false
-    # List commits in reverse order (from newer to older) instead of the default (older to newer).
-    reverseOrder: # optional, default is false
-          
+name: Deploy
+
+on:
+  push:
+    tags:
+      - v[0-9]+.[0-9]+.[0-9]+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Update CHANGELOG
+        id: changelog
+        uses: requarks/changelog-action@v1
+        with:
+          token: ${{ github.token }}
+          tag: ${{ github.ref_name }}
+
+      - name: Create Release
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          allowUpdates: true
+          draft: false
+          makeLatest: true
+          name: ${{ github.ref_name }}
+          body: ${{ steps.changelog.outputs.changes }}
+          token: ${{ github.token }}
+
+      - name: Commit CHANGELOG.md
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          branch: main
+          commit_message: 'docs: update CHANGELOG.md for ${{ github.ref_name }} [skip ci]'
+          file_pattern: CHANGELOG.md
