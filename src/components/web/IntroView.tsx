@@ -29,10 +29,15 @@ export const IntroView: React.FC = () => {
             TypeScript
           </Highlight>
           , and{" "}
-          <Highlight className="text-black dark:text-white">Java</Highlight>. I
-          focus on writing clean, efficient code and building reliable, scalable
-          solutions. With experience across both data engineering and software
-          development, I aim to create practical, impactful products.
+          <Highlight className="text-black dark:text-white">Java</Highlight>.
+          <div
+            style={{
+              padding: "0.5rem",
+            }}
+          />
+          I focus on writing clean, efficient code and building reliable,
+          scalable solutions. With experience across both data engineering and
+          software development, I aim to create practical, impactful products.
         </div>
       </HeroHighlight>
 

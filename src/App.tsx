@@ -28,21 +28,13 @@ function App() {
               <ProfileView></ProfileView>
             </motion.h1>
           </LampContainer>
-          <div>.</div>
-          <div>.</div>
-
-          <div>.</div>
-
-          <div>.</div>
-          <div>.</div>
-
-          <div>.</div>
-
-          <div>.</div>
-
-          <div>.</div>
-
-          <GlobeDemo></GlobeDemo>
+          <div
+            style={{
+              marginTop: "10rem",
+            }}
+          >
+            <GlobeDemo></GlobeDemo>
+          </div>
         </Flex>
       </div>
     </ColorModeContextProvider>

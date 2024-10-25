@@ -32,7 +32,7 @@ export const Card = React.memo(
         preview={false}
         style={{
           width: "12rem",
-          padding: "0.5rem",
+          padding: "1rem",
         }}
       ></Image>
 

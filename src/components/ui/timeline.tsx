@@ -9,6 +9,7 @@ import {
 import React, { useEffect, useRef, useState } from "react";
 import { BackgroundGradient } from "./background-gradient";
 import { CarousellView } from "../web/CarousellView";
+import { Highlight } from "./hero-highlight";
 
 interface TimelineEntry {
   title: string;
@@ -61,7 +62,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white ">
             Work Experience
           </h2>
-          <h2>Singaporean</h2>
+          <h3 className="text-lg md:text-lg mb-4 text-black dark:text-white">
+            <div>Singaporean</div>
+            <br></br>
+            Python | React | Next.js | Vue.Js | Node.js | Java | AWS | GCP |
+            Docker | Kubernetes | Git |
+          </h3>
         </div>
 
         <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
@@ -83,8 +89,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     {item.logo ? (
                       <div
                         style={{
+                          marginRight: "6rem",
                           padding: "2rem",
-                          marginRight: "4rem",
                         }}
                       >
                         <Image src={item.logo} preview={false} />
@@ -93,8 +99,20 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                       item.title
                     )}
                   </h3>
-                  <Typography.Text style={{}}>{item.dates}</Typography.Text>
-                  <Typography.Text type="success" style={{}}>
+                  <Typography.Text
+                    style={{
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {item.dates}
+                  </Typography.Text>
+                  <Typography.Text
+                    type="success"
+                    style={{
+                      fontWeight: "bold",
+                      fontSize: "1.2rem",
+                    }}
+                  >
                     {item.position}
                   </Typography.Text>
                   <Divider dashed style={{}}>
@@ -104,8 +122,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     <div
                       style={{
                         // height: "20rem",
+                        width: "25rem",
                         // scale: 0.5,
-                        paddingLeft: "5rem",
                       }}
                     >
                       <CarousellView
@@ -116,33 +134,30 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 </Flex>
               </div>
 
-              <div className="relative pl-20 pr-4 md:pl-4 w-full">
+              <div className="relative w-full ">
                 <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                   {item.title}
                 </h3>
                 {/* {item.content}{" "} */}
                 <List
                   size="small"
+                  style={{
+                    paddingRight: "8rem",
+                  }}
                   dataSource={item.pointers}
                   renderItem={(item) => (
                     <div>
                       <Divider></Divider>
                       <List.Item
                         style={{
-                          padding: "0.1rem",
-                          justifyContent: "center",
+                          // justifyContent: "center",
+
+                          textAlign: "left",
                         }}
                       >
-                        <Typography.Paragraph
-                          className="xs:text-xs sm:text-sm md:text-md lg:text-lg xl:text-xm"
-                          style={{
-                            // fontSize: "0.5rem",
-                            fontWeight: "normal",
-                            listStyleType: "disc",
-                          }}
-                        >
-                          {item}
-                        </Typography.Paragraph>
+                        <Typography.Text className="xs:text-xs sm:text-sm md:text-md lg:text-md xl:text-xm ">
+                          {"-"} {item}
+                        </Typography.Text>
                       </List.Item>
                     </div>
                   )}

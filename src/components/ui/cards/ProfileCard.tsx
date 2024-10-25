@@ -27,12 +27,7 @@ export const ProfileCard: React.FC<
         <Card
           style={{
             width: "28rem",
-            letterSpacing: "0.001rem",
-            padding: "1rem",
-            // height: "100%",
-            // height: "30rem",
-            // opacity: 0.8,
-            // border: "double",
+            // letterSpacing:e",
             borderRadius: "22px",
             // color: "cyan",
           }}
@@ -41,7 +36,10 @@ export const ProfileCard: React.FC<
               alt="profile picture"
               src={profilePic}
               style={{
-                padding: "4rem",
+                // padding: "4rem",
+                paddingLeft: "4rem",
+                paddingRight: "4rem",
+                paddingTop: "1rem",
                 margin: "0 auto",
               }}
             ></img>
@@ -55,18 +53,26 @@ export const ProfileCard: React.FC<
                 Rahul Singh
               </Typography.Title>
 
-              <Typography.Text>Software Engineer</Typography.Text>
+              <Typography.Text>
+                Software Engineer / Data Engineer
+              </Typography.Text>
             </div>
           }
         >
-          <p>Passionate about creating interactive user experiences.</p>
+          <i>"Software takes years of mastery"</i>
           <Card.Meta
-            title="React Developer"
-            description="Experienced in building web applications with React"
+            style={{
+              paddingTop: "0.5rem",
+            }}
+            title="About Me"
+            description="Passionate software engineer with a knack for data engineering and a love for solving complex problems."
+          ></Card.Meta>
+          <div
+            style={{
+              paddingTop: "0.5rem",
+            }}
           >
-            {/* test1 */}
-          </Card.Meta>
-          <div>
+            <Typography.Text>Email me at: </Typography.Text>
             <Typography.Link href="mailto:rahulsinghpython@gmail.com">
               rahulsinghpython@gmail.com
             </Typography.Link>

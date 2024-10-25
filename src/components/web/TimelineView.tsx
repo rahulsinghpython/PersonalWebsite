@@ -53,13 +53,5 @@ export const TimelineView: React.FC = () => {
       ],
     },
   ];
-  return (
-    <Card
-      style={{
-        borderRadius: "22px",
-      }}
-    >
-      <Timeline data={data}></Timeline>
-    </Card>
-  );
+  return <Timeline data={data}></Timeline>;
 };
