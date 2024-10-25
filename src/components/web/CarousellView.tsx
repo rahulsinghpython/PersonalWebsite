@@ -1,5 +1,4 @@
 import { Carousel, Image, Typography } from "antd";
-// import path from "path";
 import React, { useEffect, useState } from "react";
 
 type CarousellViewProps = {
@@ -10,8 +9,8 @@ export const CarousellView: React.FC<CarousellViewProps> = (
   props: CarousellViewProps
 ) => {
   const [imagePaths, setImagePaths] = useState<
-    Record<string, () => Promise<unknown>>
-  >({});
+    { title: string; src: string }[]
+  >([]);
 
   useEffect(() => {
     let paths: Record<string, () => Promise<unknown>> = {};
@@ -26,7 +25,21 @@ export const CarousellView: React.FC<CarousellViewProps> = (
         "/src/assets/carousel/uniad/*.{png,jpg,jpeg,svg}"
       );
     }
-    setImagePaths(paths);
+
+    const loadImages = async () => {
+      const entries = await Promise.all(
+        Object.entries(paths).map(async ([filePath, importFn]) => {
+          const fileName = filePath.split("/").pop() || "";
+          const title = getFileName(fileName) || "";
+          const module = await importFn();
+          const src = (module as { default: string }).default;
+          return { title, src };
+        })
+      );
+      setImagePaths(entries);
+    };
+
+    loadImages();
   }, [props.name]);
 
   return (
@@ -41,26 +54,21 @@ export const CarousellView: React.FC<CarousellViewProps> = (
         width: "20rem",
       }}
     >
-      {Object.entries(imagePaths).map(([filePath]) => {
-        if (filePath.endsWith(".mp4")) {
-          // console.log(filePath);
+      {imagePaths.map((image) => {
+        if (image.src.endsWith(".mp4")) {
           return (
             <div>
-              <Typography.Title level={4}>
-                {getFileName(filePath)}
-              </Typography.Title>
-              <video autoPlay loop muted src={filePath}></video>
+              <Typography.Title level={4}>{image.title}</Typography.Title>
+              <video autoPlay loop muted src={image.src}></video>
             </div>
           );
         }
         return (
           <div>
-            <Typography.Title level={4}>
-              {getFileName(filePath)}
-            </Typography.Title>
+            <Typography.Title level={4}>{image.title}</Typography.Title>
             <Image
-              src={filePath}
-              title={getFileName(filePath)}
+              src={image.src}
+              title={image.title}
               style={{
                 borderRadius: "0.5rem",
               }}
@@ -73,7 +81,6 @@ export const CarousellView: React.FC<CarousellViewProps> = (
 };
 
 function getFileName(filePath: string) {
-  console.log(filePath.split("/").pop()?.split(".")[0]);
   const file_name = filePath.split("/").pop()?.split(".")[0];
   const file_name_split = file_name?.split("_");
   if (file_name_split) {
@@ -81,6 +88,4 @@ function getFileName(filePath: string) {
       file_name_split[0].charAt(0).toUpperCase() + file_name_split[0].slice(1);
     return file_name_split.join(" ");
   }
-
-  //   return filePath.split("/").pop()?.split(".")[0] || "";
 }
