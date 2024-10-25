@@ -1,12 +1,9 @@
-import { useEffect, useState } from "react";
-import { Card, Divider, Flex } from "antd";
+import { Divider, Flex } from "antd";
 import { ProfileCard } from "../ui/cards/ProfileCard";
-import { FocusCards } from "../ui/focus-cards";
-import { TechnologyCards } from "./TechnologyCards";
-import { Timeline } from "../ui/timeline";
-import { TimelineView } from "./TimelineView";
 import { IntroView } from "./IntroView";
 import { ProjectView } from "./ProjectView";
+import { TechnologyCards } from "./TechnologyCards";
+import { TimelineView } from "./TimelineView";
 
 export const ProfileView: React.FC = () => {
   return (

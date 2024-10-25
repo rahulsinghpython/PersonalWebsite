@@ -1,6 +1,5 @@
-import { title } from "process";
-import { Card, Carousel } from "../ui/apple-cards-carousel";
 import uniadPhoto from "@/assets/carousel/uniad/dashboard_overview.png";
+import { Card, Carousel } from "../ui/apple-cards-carousel";
 
 const data = [
   {
@@ -9,14 +8,6 @@ const data = [
     src: uniadPhoto,
     content: (
       <div className="dark:text-white">
-        <div>--</div>
-        <div>--</div>
-        <div>--</div>
-        <div>--</div>
-        <div>--</div>
-        <div>--</div>
-        <div>--</div>
-        <div>--</div>
       </div>
     ),
   },

@@ -1,15 +1,13 @@
 "use client";
-import { Divider, Flex, Image, List, Tag, Typography } from "antd";
+import { Divider, Flex, Image, List, Typography } from "antd";
 import {
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
   motion,
+  useScroll,
+  useTransform
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import { BackgroundGradient } from "./background-gradient";
 import { CarousellView } from "../web/CarousellView";
-import { Highlight } from "./hero-highlight";
+import { BackgroundGradient } from "./background-gradient";
 
 interface TimelineEntry {
   title: string;

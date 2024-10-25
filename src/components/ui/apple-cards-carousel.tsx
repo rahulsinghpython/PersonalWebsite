@@ -1,21 +1,21 @@
 "use client";
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  createContext,
-  useContext,
-} from "react";
+import { cn } from "@/utils/cn";
 import {
   IconArrowNarrowLeft,
   IconArrowNarrowRight,
   IconX,
 } from "@tabler/icons-react";
-import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 // import Image, { ImageProps } from "next/image";
-import { Button, Image, ImageProps } from "antd";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import { Button, Image, ImageProps } from "antd";
 
 interface CarouselProps {
   items: JSX.Element[];
