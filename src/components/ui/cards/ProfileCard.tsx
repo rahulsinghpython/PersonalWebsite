@@ -1,8 +1,8 @@
 import { Card, Divider, Image, Popover, Typography } from "antd";
 import profilePic from "@/assets/profile.png";
 import reactIcon from "@/assets/react.svg";
-import githubIcon from "@/assets/technologies/github.svg";
-import linkedinIcon from "@/assets/technologies/linkedin.svg";
+import githubIcon from "@/assets/social/github.svg";
+import linkedinIcon from "@/assets/social/linkedin.svg";
 
 import "../../../contexts/color-mode/index.css";
 import { BackgroundGradient } from "../background-gradient";
