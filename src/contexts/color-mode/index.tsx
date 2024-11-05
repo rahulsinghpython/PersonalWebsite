@@ -32,11 +32,13 @@ export const ColorModeContextProvider: React.FC<PropsWithChildren> = ({
   }, [mode]);
 
   const setColorMode = () => {
-    if (mode === "light") {
-      setMode("dark");
-    } else {
-      setMode("light");
-    }
+    // if (mode === "light") {
+    //   setMode("light");
+    // } else {
+    //   setMode("dark");
+    // }
+    // removing light mode temporily
+    setMode('dark')
   };
 
   const { darkAlgorithm, defaultAlgorithm } = theme;

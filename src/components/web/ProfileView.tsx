@@ -12,16 +12,17 @@ export const ProfileView: React.FC = () => {
         <ProfileCard></ProfileCard>
         <IntroView></IntroView>
       </Flex>
-      <Divider>
-        <h1 className="text-4xl font-bold">Projects</h1>
-      </Divider>
-      <ProjectView></ProjectView>
+      
 
       <Divider></Divider>
       <Flex justify={"space-evenly"} align="center">
         <TechnologyCards></TechnologyCards>
         <TimelineView></TimelineView>
       </Flex>
+      <Divider>
+        <h1 className="text-4xl font-bold">Projects</h1>
+      </Divider>
+      <ProjectView></ProjectView>
     </div>
   );
 };
