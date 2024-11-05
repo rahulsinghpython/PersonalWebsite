@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/rahulsinghpython/personal-website/compare/v1.0.0...v1.1.0) (2024-11-05)
+
+
+### Features
+
+* moved Project below timeline. ([747ed51](https://github.com/rahulsinghpython/personal-website/commit/747ed51d28e4cc8eb8b74cd0db018b4e0e0e2955))
+
+
+### Bug Fixes
+
+* Fixed a import error in tailwind for macos. ([747ed51](https://github.com/rahulsinghpython/personal-website/commit/747ed51d28e4cc8eb8b74cd0db018b4e0e0e2955))
+* removed github and linkedin as technologies and added it so socials ([e587958](https://github.com/rahulsinghpython/personal-website/commit/e587958db8613c25a9d0b8e65bbe9d0fa5ebe884))
+
 ## 1.0.0 (2024-10-25)
 
 
