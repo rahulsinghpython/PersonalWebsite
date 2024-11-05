@@ -2,9 +2,12 @@ import { Flex } from "antd";
 import { motion } from "framer-motion";
 import "./App.css";
 import { GlobeDemo } from "./components/ui/globedemo";
-import { LampContainer } from "./components/ui/lamp";
+// import { LampContainer } from "./components/ui/lamp";
 import { ProfileView } from "./components/web/ProfileView";
 import { ColorModeContextProvider } from "./contexts/color-mode";
+import { lazy } from "react";
+
+const LampContainer = lazy(() => import('@/components/ui/lamp'))
 
 function App() {
   return (

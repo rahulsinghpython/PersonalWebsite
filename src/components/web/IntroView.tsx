@@ -1,7 +1,5 @@
-import { Card, Image } from "antd";
+import { Card } from "antd";
 import { HeroHighlight, Highlight } from "../ui/hero-highlight";
-import { motion } from "framer-motion";
-import DropdownButton from "antd/es/dropdown/dropdown-button";
 
 export const IntroView: React.FC = () => {
   return (
@@ -47,3 +45,5 @@ export const IntroView: React.FC = () => {
     </Card>
   );
 };
+
+export default IntroView;

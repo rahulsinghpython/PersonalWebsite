@@ -148,12 +148,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                       <Divider></Divider>
                       <List.Item
                         style={{
-                          // justifyContent: "center",
+                          justifyContent: "center",
 
-                          textAlign: "left",
+                          // textAlign: "center",
                         }}
                       >
-                        <Typography.Text className="xs:text-xs sm:text-sm md:text-md lg:text-md xl:text-xm ">
+                        <Typography.Text className="xs:text-xs sm:text-sm md:text-md lg:text-xm xl:text-xm ">
                           {"-"} {item}
                         </Typography.Text>
                       </List.Item>

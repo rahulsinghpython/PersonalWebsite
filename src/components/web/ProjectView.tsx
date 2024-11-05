@@ -11,18 +11,18 @@ const data = [
       </div>
     ),
   },
-  {
-    category: "S2T",
-    title: "Speech to Text",
-    src: "",
-    content: "",
-  },
-  {
-    category: "Etavolt",
-    title: "E-commerce Platform",
-    src: "",
-    content: "",
-  },
+  // {
+  //   category: "S2T",
+  //   title: "Speech to Text",
+  //   src: "",
+  //   content: "",
+  // },
+  // {
+  //   category: "Etavolt",
+  //   title: "E-commerce Platform",
+  //   src: "",
+  //   content: "",
+  // },
 ];
 
 export function ProjectView() {

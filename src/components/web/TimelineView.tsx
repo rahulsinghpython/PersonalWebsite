@@ -1,4 +1,3 @@
-import { Card, Divider, Typography } from "antd";
 import { Timeline } from "../ui/timeline";
 
 export const TimelineView: React.FC = () => {
@@ -10,10 +9,10 @@ export const TimelineView: React.FC = () => {
       dates: "Aug 2024 - Present",
       position: "Lead Software Engineer",
       pointers: [
-        `Developed a Enterprise Solution for tuition centres`,
-        `Led a team of 5 developers to deliver a scalable and secure platform for 1000+ users`,
+        `Developed an Enterprise Solution for tuition centres`,
+        `Maintained a secure platform for 1000+ users`,
         `Implemented a CI/CD pipeline to automate deployment and testing processes`,
-        `RDMS design and implementation for the platform`,
+        `RDMS design and implementation for the Enterprise Solution`,
       ],
       images: true,
     },
@@ -40,8 +39,6 @@ export const TimelineView: React.FC = () => {
       pointers: [
         `Designed and developed scalable microservices architecture using Python, Docker,
  and Kubernetes, increasing system uptime by 200% and reducing latency by 50%.`,
-        ` Built high-availability applications with containerization and orchestration tools,
- ensuring 99.9% uptime and zero downtime deployments.`,
         `Developed high-performance in-house APIs using Flask and FastAPI, handling over
  10,000 requests per second.`,
         `Migrated and optimized C++ legacy codes, achieving a 300% performance

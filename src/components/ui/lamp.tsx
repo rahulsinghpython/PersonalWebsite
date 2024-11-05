@@ -65,7 +65,7 @@ export const LampContainer = ({
           initial={{ opacity: 0.5, width: "15rem" }}
           whileInView={{ opacity: 1, width: "90rem" }}
           transition={{
-            delay: 0.4,
+            delay: 1,
             duration: 0.8,
             ease: "easeInOut",
           }}
@@ -81,7 +81,7 @@ export const LampContainer = ({
           initial={{ opacity: 0.5, width: "15rem" }}
           whileInView={{ opacity: 1, width: "90rem" }}
           transition={{
-            delay: 0.4,
+            delay: 1,
             duration: 0.8,
             ease: "easeInOut",
           }}
@@ -126,3 +126,5 @@ export const LampContainer = ({
     </div>
   );
 };
+
+export default LampContainer;
