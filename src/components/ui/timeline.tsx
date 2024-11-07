@@ -57,10 +57,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             borderRadius: "1rem",
           }}
         >
-          <h2 className="text-lg md:text-4xl mb-4  dark:text-white ">
+          <h2 className="text-lg md:text-4xl mb-4 text-white  dark:text-white ">
             Work Experience
           </h2>
-          <h3 className="text-lg md:text-lg mb-4 dark:text-white">
+          <h3 className="text-lg md:text-lg mb-4 text-white  dark:text-white">
             <div>Singaporean</div>
             <br></br>
             Python | React | Next.js | Vue.Js | Node.js | Java | AWS | GCP |
