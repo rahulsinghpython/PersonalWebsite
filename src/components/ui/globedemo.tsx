@@ -403,7 +403,7 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-slate-950 bg-white relative w-full">
+    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-slate-950 bg-slate-950 relative w-full">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
         <motion.div
           initial={{
@@ -419,9 +419,13 @@ export function GlobeDemo() {
           }}
           className="div"
         >
-          <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
+          <h2 className="text-center text-xl md:text-4xl font-bold dark:text-white">
             Experienced working with people globally
           </h2>
+          <br></br>
+            <h3 className="dark:text-white">Use your mouse to play with the globe 😉
+
+            </h3>
           <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
             {/* Worked globally with multiple clients */}
           </p>
