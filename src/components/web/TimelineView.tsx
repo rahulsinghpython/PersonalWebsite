@@ -9,12 +9,14 @@ export const TimelineView: React.FC = () => {
       dates: "Aug 2024 - Present",
       position: "Lead Software Engineer",
       pointers: [
-        `Developed an Enterprise Solution for tuition centres`,
-        `Maintained a secure platform for 1000+ users`,
-        `Implemented a CI/CD pipeline to automate deployment and testing processes`,
-        `RDMS design and implementation for the Enterprise Solution`,
+        `Maintained a secure platform for 10,000+ users across Asia.`,
+        `Developed an Enterprise Solution for tuition centres.`,
+        `Implemented a CI/CD pipeline to automate deployment and testing processes.`,
+        `RDMS design and implementation for the Finance, User Management, Lesson Bookings, Calendar and Access Control.`,
       ],
       images: true,
+      extra:
+        "Supported by SMU Institute of Innovation & Entrepreneurship, NTU Innovation Lab, NUS Enterprise.",
     },
     {
       title: "Etavolt",
@@ -26,7 +28,7 @@ export const TimelineView: React.FC = () => {
         `Led full stack development of a customer acquisition platform that increased efficiency by 150% and transformed the company's product offerings.`,
         `Completed 2 successful software development cycles with React, 
         ThreeJS, and Python, resulting in a 3D modelling software for mesh using point cloud and LiDAR data.`,
-        `Delivered technical presentations to clients, investors, and stakeholders, showcasing our technologies`,
+        `Delivered technical presentations to clients, investors, and stakeholders, showcasing our technologies.`,
       ],
       images: true,
     },
@@ -48,6 +50,7 @@ export const TimelineView: React.FC = () => {
         ` Led API development team and presented software solutions at international
  business trips.`,
       ],
+      images: true,
     },
   ];
   return <Timeline data={data}></Timeline>;

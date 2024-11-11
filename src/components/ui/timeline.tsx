@@ -1,10 +1,6 @@
 "use client";
 import { Divider, Flex, Image, List, Typography } from "antd";
-import {
-  motion,
-  useScroll,
-  useTransform
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { CarousellView } from "../web/CarousellView";
 import { BackgroundGradient } from "./background-gradient";
@@ -18,6 +14,7 @@ interface TimelineEntry {
   position: string;
   pointers: string[];
   images?: boolean;
+  extra?: string;
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
@@ -74,48 +71,59 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               key={index}
               className="flex justify-start pt-8 md:pt-8 md:gap-2"
             >
-              <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-                <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-black dark:bg-black flex items-center justify-center">
-                  <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
-                </div>
-
+              <div className="h-10 absolute left-3 md:left-3.5 w-10  rounded-full bg-black dark:bg-black flex items-center justify-center mt-24">
+                <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
+              </div>
+              <div className="sticky flex flex-col xs:flex-row md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
                 <Flex vertical>
-                  <Divider />
-                  <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 ">
+                  <div
+                    style={{
+                      width: "90%",
+                    }}
+                  >
+                    <Divider />
+                  </div>
+                  <h3 className="hidden md:block pr-20 pl-20  font-bold text-neutral-500 dark:text-neutral-500 ">
                     {/* {item.title} */}
 
                     {item.logo ? (
                       <div
-                        style={{
-                          marginRight: "6rem",
-                          padding: "2rem",
-                        }}
+                        className="w-full max-w-xs rounded-md mx-auto pr-10 pl-10"
+                        // style={{
+                        //   marginRight: "7rem",
+                        //   // padding: "3rem",
+
+                        //   padding: "2rem",
+                        // }}
                       >
                         <Image src={item.logo} preview={false} />
                       </div>
                     ) : (
-                      item.title
+                      <Typography.Text
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "1.2rem",
+                        }}
+                      >
+                        {item.name}
+                      </Typography.Text>
                     )}
                   </h3>
-                  <Typography.Text
-                    style={{
-                      fontWeight: "bold",
-                    }}
-                  >
+                  <Typography.Text className="font-bold text-sm md:text-base sm:text-xs lg:text-lg">
                     {item.dates}
                   </Typography.Text>
-                  <Typography.Text
-                    type="success"
-                    style={{
-                      fontWeight: "bold",
-                      fontSize: "1.2rem",
-                    }}
-                  >
+                  <Typography.Text className="font-bold text-lg md:text-xl lg:text-2xl sm:text-xs text-green-600">
                     {item.position}
                   </Typography.Text>
-                  <Divider dashed style={{}}>
-                    <Typography.Title level={5}>Showcase</Typography.Title>
-                  </Divider>
+                  <div
+                    style={{
+                      width: "90%",
+                    }}
+                  >
+                    <Divider dashed>
+                      {/* <Typography.Title level={5}>Showcase</Typography.Title> */}
+                    </Divider>
+                  </div>
                   {item.images && (
                     <div
                       style={{
@@ -133,19 +141,19 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </div>
 
               <div className="relative w-full ">
-                <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
-                  {item.title}
-                </h3>
                 {/* {item.content}{" "} */}
                 <List
                   size="small"
-                  style={{
-                    paddingRight: "8rem",
-                  }}
+                  style={
+                    {
+                      // paddingRight: "8rem",
+                    }
+                  }
                   dataSource={item.pointers}
                   renderItem={(item) => (
                     <div>
                       <Divider></Divider>
+
                       <List.Item
                         style={{
                           justifyContent: "center",

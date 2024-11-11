@@ -6,7 +6,7 @@ import { TechnologyCards } from "./TechnologyCards";
 import { TimelineView } from "./TimelineView";
 import { lazy } from "react";
 
-const IntroView = lazy(() => import('./IntroView'))
+const IntroView = lazy(() => import("./IntroView"));
 
 export const ProfileView: React.FC = () => {
   return (
@@ -15,17 +15,17 @@ export const ProfileView: React.FC = () => {
         <ProfileCard></ProfileCard>
         <IntroView></IntroView>
       </Flex>
-      
 
       <Divider></Divider>
       <Flex justify={"space-evenly"} align="center">
-        <TechnologyCards></TechnologyCards>
         <TimelineView></TimelineView>
+        <TechnologyCards></TechnologyCards>
       </Flex>
-      <Divider 
-      style={{
-        marginTop: "5rem"
-      }}>
+      <Divider
+        style={{
+          marginTop: "5rem",
+        }}
+      >
         <h1 className="text-4xl font-bold">Projects (under construction)</h1>
       </Divider>
       <ProjectView></ProjectView>

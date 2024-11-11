@@ -420,12 +420,12 @@ export function GlobeDemo() {
           className="div"
         >
           <h2 className="text-center text-xl md:text-4xl font-bold dark:text-white">
-            Experienced working with people globally
+            Managed teams from across the world
           </h2>
           <br></br>
-            <h3 className="dark:text-white">Use your mouse to play with the globe 😉
-
-            </h3>
+          <h3 className="dark:text-white">
+            Click the globe and move it around 😉
+          </h3>
           <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
             {/* Worked globally with multiple clients */}
           </p>

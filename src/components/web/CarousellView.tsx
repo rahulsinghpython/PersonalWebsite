@@ -43,28 +43,32 @@ export const CarousellView: React.FC<CarousellViewProps> = (
   }, [props.name]);
 
   return (
-    <Carousel dots dotPosition="bottom" autoplay autoplaySpeed={3000}>
-      {imagePaths.map((image, index) => (
-        <div key={index}>
-          <Typography.Title level={4}>{image.title}</Typography.Title>
-          {image.src.endsWith(".mp4") ? (
-            <video
-              autoPlay
-              loop
-              muted
-              src={image.src}
-              style={{ width: "15rem", margin: "0 auto" }}
-            />
-          ) : (
-            <Image
-              src={image.src}
-              title={image.title}
-              style={{ borderRadius: "0.5rem", width: "15rem" }}
-            />
-          )}
-        </div>
-      ))}
-    </Carousel>
+    <div className="hidden md:block">
+      <Carousel dots dotPosition="bottom" autoplay autoplaySpeed={3000}>
+        {imagePaths.map((image, index) => (
+          <div key={index} className="text-center">
+            <Typography.Title level={4} className="text-lg">
+              {image.title}
+            </Typography.Title>
+            {image.src.endsWith(".mp4") ? (
+              <video
+                autoPlay
+                loop
+                muted
+                src={image.src}
+                className="w-full max-w-xs rounded-md mx-auto ml-10"
+              />
+            ) : (
+              <Image
+                src={image.src}
+                title={image.title}
+                className="w-full max-w-xs rounded-md ml-10"
+              />
+            )}
+          </div>
+        ))}
+      </Carousel>
+    </div>
   );
 };
 
