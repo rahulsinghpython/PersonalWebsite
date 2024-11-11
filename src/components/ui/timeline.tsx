@@ -49,15 +49,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         ref={containerRef}
       >
         <div
-          className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 "
+          className="max-w-7xl mx-auto py-16 px-4 md:px-8 lg:px-10 "
           style={{
             borderRadius: "1rem",
           }}
         >
-          <h2 className="text-lg md:text-4xl mb-4 text-white  dark:text-white ">
+          <h2 className="text-lg md:text-4xl pt-5 text-white  dark:text-white ">
             Work Experience
           </h2>
-          <h3 className="text-lg md:text-lg mb-4 text-white  dark:text-white">
+          <h3 className="text-lg md:text-lg  text-white  dark:text-white">
             <div>Singaporean</div>
             <br></br>
             Python | React | Next.js | Vue.Js | Node.js | Java | AWS | GCP |
@@ -140,34 +140,36 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 </Flex>
               </div>
 
-              <div className="relative w-full ">
+              <div className="relative w-full  ">
                 {/* {item.content}{" "} */}
-                <List
-                  size="small"
-                  style={
-                    {
-                      // paddingRight: "8rem",
+                <div>
+                  <List
+                    size="small"
+                    style={
+                      {
+                        // paddingRight: "8rem",
+                      }
                     }
-                  }
-                  dataSource={item.pointers}
-                  renderItem={(item) => (
-                    <div>
-                      <Divider></Divider>
+                    dataSource={item.pointers}
+                    renderItem={(item) => (
+                      <div>
+                        <Divider></Divider>
 
-                      <List.Item
-                        style={{
-                          justifyContent: "center",
+                        <List.Item
+                          style={{
+                            justifyContent: "center",
 
-                          // textAlign: "center",
-                        }}
-                      >
-                        <Typography.Text className="xs:text-xs sm:text-sm md:text-md lg:text-xm xl:text-xm ">
-                          {"-"} {item}
-                        </Typography.Text>
-                      </List.Item>
-                    </div>
-                  )}
-                ></List>
+                            // textAlign: "center",
+                          }}
+                        >
+                          <Typography.Text className="xs:text-xs sm:text-sm md:text-md lg:text-xm xl:text-xm ">
+                            {"-"} {item}
+                          </Typography.Text>
+                        </List.Item>
+                      </div>
+                    )}
+                  ></List>
+                </div>
               </div>
             </div>
           ))}

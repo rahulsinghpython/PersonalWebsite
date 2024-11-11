@@ -56,13 +56,13 @@ export const CarousellView: React.FC<CarousellViewProps> = (
                 loop
                 muted
                 src={image.src}
-                className="w-full max-w-xs rounded-md mx-auto ml-10"
+                className="w-full max-w-xs rounded-md mx-auto px-5"
               />
             ) : (
               <Image
                 src={image.src}
                 title={image.title}
-                className="w-full max-w-xs rounded-md ml-10"
+                className="w-full max-w-xs rounded-md px-5"
               />
             )}
           </div>
