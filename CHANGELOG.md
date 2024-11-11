@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.2.0](https://github.com/rahulsinghpython/personal-website/compare/v1.1.0...v1.2.0) (2024-11-11)
+
+
+### Features
+
+* added svg, optimized animations for initial loading, Optimized layout and font ([078be26](https://github.com/rahulsinghpython/personal-website/commit/078be26d7f96aaae58852f2d3602a88e44e56f7d))
+* Changes to the content, removed carousell from mobile view, adjusted scaling a bit better on timeline. ([4482426](https://github.com/rahulsinghpython/personal-website/commit/44824260de53ea70573869cabba3e3e769172492))
+
+
+### Bug Fixes
+
+* declaring the text color for certain components to fix the contrast issue ([98a68e1](https://github.com/rahulsinghpython/personal-website/commit/98a68e1382e0ceafc49d0d651551a241856a519b))
+* fixed clasing issues when scaling ([a8e31c7](https://github.com/rahulsinghpython/personal-website/commit/a8e31c7973473ea4c67f8ceee7c3ebf8b977637c))
+* Fixed css text issues in edge browsers. ([633ec19](https://github.com/rahulsinghpython/personal-website/commit/633ec1995b5c38ccb6bdfd69d2b6206327812366))
+
 ## [1.1.0](https://github.com/rahulsinghpython/personal-website/compare/v1.0.0...v1.1.0) (2024-11-05)
 
 
