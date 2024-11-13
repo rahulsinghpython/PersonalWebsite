@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/rahulsinghpython/personal-website/compare/v1.2.0...v1.3.0) (2024-11-11)
+
+
+### Features
+
+* Finally added readme ([4c68f64](https://github.com/rahulsinghpython/personal-website/commit/4c68f64f95973f59e3db0c27fff68db50131dfbe))
+
 ## [1.2.0](https://github.com/rahulsinghpython/personal-website/compare/v1.1.0...v1.2.0) (2024-11-11)
 
 
